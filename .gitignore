@@ -1,0 +1,16 @@
+.idea/PropBank.iml
+cmake-build-debug/libPropBank.a
+cmake-build-debug/PropBank.cbp
+cmake-build-debug/CMakeFiles/PropBank.dir/Argument.cpp.o
+cmake-build-debug/CMakeFiles/PropBank.dir/build.make
+cmake-build-debug/CMakeFiles/PropBank.dir/cmake_clean.cmake
+cmake-build-debug/CMakeFiles/PropBank.dir/cmake_clean_target.cmake
+cmake-build-debug/CMakeFiles/PropBank.dir/CXX.includecache
+cmake-build-debug/CMakeFiles/PropBank.dir/depend.internal
+cmake-build-debug/CMakeFiles/PropBank.dir/depend.make
+cmake-build-debug/CMakeFiles/PropBank.dir/DependInfo.cmake
+cmake-build-debug/CMakeFiles/PropBank.dir/flags.make
+cmake-build-debug/CMakeFiles/PropBank.dir/link.txt
+cmake-build-debug/CMakeFiles/PropBank.dir/progress.make
+cmake-build-debug/CMakeFiles/PropBank.dir/Role.cpp.o
+cmake-build-debug/CMakeFiles/PropBank.dir/RoleSet.cpp.o
