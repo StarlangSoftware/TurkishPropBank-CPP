@@ -3,4 +3,4 @@ project(PropBank)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_library(PropBank Argument.cpp Argument.h ArgumentType.h Role.cpp Role.h RoleSet.cpp RoleSet.h)
+add_library(PropBank Argument.cpp Argument.h ArgumentType.h Role.cpp Role.h RoleSet.cpp RoleSet.h FramesetArgument.cpp FramesetArgument.h Frameset.cpp Frameset.h Predicate.cpp Predicate.h)
