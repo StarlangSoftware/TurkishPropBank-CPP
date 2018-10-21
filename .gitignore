@@ -49,3 +49,8 @@ cmake-build-debug/CMakeFiles/3.12.2/CompilerIdC/a.out
 cmake-build-debug/CMakeFiles/3.12.2/CompilerIdC/CMakeCCompilerId.c
 cmake-build-debug/CMakeFiles/3.12.2/CompilerIdCXX/a.out
 cmake-build-debug/CMakeFiles/3.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp
+cmake-build-debug/CMakeFiles/PropBank.dir/Frameset.cpp.o
+cmake-build-debug/CMakeFiles/PropBank.dir/FramesetArgument.cpp.o
+cmake-build-debug/CMakeFiles/PropBank.dir/FramesetList.cpp.o
+cmake-build-debug/CMakeFiles/PropBank.dir/Predicate.cpp.o
+cmake-build-debug/CMakeFiles/PropBank.dir/PredicateList.cpp.o
