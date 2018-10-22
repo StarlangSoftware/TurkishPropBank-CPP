@@ -8,6 +8,19 @@ Frameset::Frameset(string id) {
     this->id = move(id);
 }
 
+Frameset::Frameset(XmlDocument xmlDocument) {
+    XmlElement* element, *argument;
+    xmlDocument.parse();
+    element = xmlDocument.getFirstChild();
+    id = move(element->getAttributeValue("id"));
+    argument = element->getFirstChild();
+    while (argument != nullptr){
+        FramesetArgument framesetArgument = FramesetArgument(argument->getAttributeValue("name"), argument->getPcData());
+        framesetArguments.push_back(framesetArgument);
+        argument = argument->getNextSibling();
+    }
+}
+
 bool Frameset::containsArgument(ArgumentType argumentType) {
     for (FramesetArgument framesetArgument : framesetArguments){
         if (getArguments(framesetArgument.getArgumentType()) == argumentType){

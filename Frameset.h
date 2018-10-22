@@ -8,6 +8,7 @@
 #include <vector>
 #include "FramesetArgument.h"
 #include "ArgumentType.h"
+#include "XmlDocument.h"
 
 using namespace std;
 
@@ -17,6 +18,7 @@ private:
     vector<FramesetArgument> framesetArguments;
 public:
     Frameset(string id);
+    Frameset(XmlDocument xmlDocument);
     bool containsArgument(ArgumentType argumentType);
     void addArgument(string type, string definition);
     void deleteArgument(string type, string definition);
