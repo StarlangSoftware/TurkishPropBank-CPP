@@ -12,7 +12,7 @@ enum class ArgumentType {
     NONE, PREDICATE, ARG0, ARG1, ARG2, ARG3, ARG4, ARG5, ARGMNONE, ARGMEXT, ARGMLOC, ARGMDIS, ARGMADV, ARGMCAU, ARGMTMP, ARGMPNC, ARGMMNR, ARGMDIR
 };
 
-ArgumentType getArguments(const string argumentsType){
+static ArgumentType getArguments(const string argumentsType){
     if (argumentsType.empty()){
         return ArgumentType::NONE;
     } else {
@@ -89,7 +89,7 @@ ArgumentType getArguments(const string argumentsType){
     }
 }
 
-string getPropbankType(ArgumentType argumentType){
+static string getPropbankType(ArgumentType argumentType){
     switch (argumentType){
         case ArgumentType::ARG0:
             return "ARG0";
