@@ -9,10 +9,10 @@
 FramesetList::FramesetList() {
     ifstream inputStream;
     string fileName;
-    inputStream.open("files-turkish.txt", ifstream::in);
+    inputStream.open("../files-turkish.txt", ifstream::in);
     while (inputStream.good()){
         getline(inputStream, fileName);
-        addFrameset(Frameset(XmlDocument(fileName)));
+        addFrameset(Frameset(XmlDocument("../Frames-Turkish/" + fileName)));
     }
     inputStream.close();
 }

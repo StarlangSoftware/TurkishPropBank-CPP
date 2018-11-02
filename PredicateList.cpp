@@ -18,10 +18,10 @@ PredicateList::PredicateList() {
     ifstream inputStream;
     string fileName;
     XmlElement *frameSetNode, *predicateNode, *roleSetNode, *rolesNode, *roleNode;
-    inputStream.open("files-english.txt", ifstream::in);
+    inputStream.open("../files-english.txt", ifstream::in);
     while (inputStream.good()){
         getline(inputStream, fileName);
-        XmlDocument xmlDocument(fileName);
+        XmlDocument xmlDocument("../Frames-English/" + fileName);
         xmlDocument.parse();
         frameSetNode = xmlDocument.getFirstChild();
         predicateNode = frameSetNode->getFirstChild();
