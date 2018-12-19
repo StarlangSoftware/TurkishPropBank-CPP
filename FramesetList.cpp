@@ -51,7 +51,7 @@ map<ArgumentType, string> FramesetList::readFromXML(string synSetId) {
     for (Frameset frame : frames){
         if (frame.getId() == synSetId){
             for (unsigned long i = 0; i < frame.getFramesetArguments().capacity(); i++){
-                frameset.emplace(getArguments(frame.getFramesetArguments().at(i).getArgumentType()), frame.getFramesetArguments().at(i).getDefinition());
+                frameset.insert_or_assign(getArguments(frame.getFramesetArguments().at(i).getArgumentType()), frame.getFramesetArguments().at(i).getDefinition());
             }
         }
     }
