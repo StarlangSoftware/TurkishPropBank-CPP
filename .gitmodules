@@ -1,0 +1,3 @@
+[submodule "library/XmlParser-CPP"]
+	path = library/XmlParser-CPP
+	url = https://github.com/olcaytaner/XmlParser-CPP.git
