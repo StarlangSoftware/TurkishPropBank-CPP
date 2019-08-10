@@ -6,14 +6,29 @@
 #include "PredicateList.h"
 #include "XmlDocument.h"
 
+/**
+ * The size method returns the number of predicates inside the list.
+ *
+ * @return the size of the list {@link HashMap}.
+ */
 unsigned long PredicateList::size() {
     return list.size();
 }
 
+/**
+ * getPredicate method returns the {@link Predicate} with the given lemma.
+ *
+ * @param lemma  Lemma of the searched predicate
+ * @return {@link Predicate} which has the given lemma.
+ */
 Predicate PredicateList::getPredicate(string lemma) {
     return list.find(lemma)->second;
 }
 
+/**
+ * A constructor of {@link PredicateList} class which reads all predicate files inside the 'Frames' folder. For each
+ * file inside that folder, the constructor creates a Predicate and puts in inside the list {@link HashMap}.
+ */
 PredicateList::PredicateList() {
     ifstream inputStream;
     string fileName;

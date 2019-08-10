@@ -4,27 +4,60 @@
 
 #include "RoleSet.h"
 
+/**
+ * A constructor of {@link RoleSet} class which takes id and name as inputs and initializes corresponding attributes
+ * with these inputs.
+ *
+ * @param id  Id of the roleSet
+ * @param name Name of the roleSet
+ */
 RoleSet::RoleSet(string id, string name) {
     this->id = move(id);
     this->name = move(name);
 }
 
+/**
+ * Accessor for id.
+ *
+ * @return id.
+ */
 string RoleSet::getId() {
     return id;
 }
 
+/**
+ * Accessor for name.
+ *
+ * @return name.
+ */
 string RoleSet::getName() {
     return name;
 }
 
+/**
+ * The addRole method takes a {@link Role} as input and adds it to the roles {@link ArrayList}.
+ *
+ * @param role  Role to be added
+ */
 void RoleSet::addRole(Role role) {
     roles.push_back(role);
 }
 
+/**
+ * The getRole method returns the role at the given index.
+ *
+ * @param index  Index of the role
+ * @return {@link Role} at the given index.
+ */
 Role RoleSet::getRole(int index) {
     return roles.at(index);
 }
 
+/**
+ * The size method returns the size of the roles {@link ArrayList}.
+ *
+ * @return the size of the roles {@link ArrayList}.
+ */
 unsigned long RoleSet::size() {
     return roles.size();
 }
