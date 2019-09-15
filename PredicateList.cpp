@@ -74,3 +74,16 @@ PredicateList::PredicateList() {
     }
     inputStream.close();
 }
+
+/**
+ * The method returns all lemma in the predicate list.
+ * @return All lemma in the predicate list.
+ */
+unordered_set<string> PredicateList::getLemmaList() {
+    unordered_set<string> lemmaList;
+    map<string, Predicate>::const_iterator iterator;
+    for (iterator = list.begin(); iterator != list.end(); iterator++){
+        lemmaList.insert(iterator->first);
+    }
+    return lemmaList;
+}

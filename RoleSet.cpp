@@ -61,3 +61,17 @@ Role RoleSet::getRole(int index) {
 unsigned long RoleSet::size() {
     return roles.size();
 }
+
+/**
+ * Finds and returns the role with the given argument number n. For example, if n == 0, the method returns
+ * the argument ARG0.
+ * @param n Argument number
+ * @return The role with the given argument number n.
+ */
+Role RoleSet::getRoleWithArgument(string n){
+    for (auto role : roles){
+        if (role.getN() == n){
+            return role;
+        }
+    }
+}

@@ -6,6 +6,7 @@
 #define PROPBANK_PREDICATELIST_H
 #include <string>
 #include <map>
+#include <unordered_set>
 #include "Predicate.h"
 
 using namespace std;
@@ -17,6 +18,7 @@ public:
     PredicateList();
     unsigned long size();
     Predicate getPredicate(string lemma);
+    unordered_set<string> getLemmaList();
 };
 
 

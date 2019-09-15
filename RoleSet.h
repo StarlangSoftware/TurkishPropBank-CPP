@@ -22,6 +22,7 @@ public:
     void addRole(Role role);
     Role getRole(int index);
     unsigned long size();
+    Role getRoleWithArgument(string n);
 };
 
 
