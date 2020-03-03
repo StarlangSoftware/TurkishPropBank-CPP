@@ -1,3 +1,5 @@
+You can also see either [Java](https://github.com/olcaytaner/TurkishPropBank) 
+or [Python](https://github.com/olcaytaner/TurkishPropBank-Py) repository.
 # PropBank
 
 In the field of SRL, PropBank is one of the studies widely recognized by the computational linguistics communities. PropBank is the bank of propositions where predicate- argument information of the corpora is annotated, and the semantic roles or arguments that each verb can take are posited.
