@@ -38,7 +38,7 @@ void Predicate::addRoleSet(RoleSet roleSet) {
  * @return the size of the roleSets {@link ArrayList}.
  */
 unsigned long Predicate::size() {
-    return roleSets.capacity();
+    return roleSets.size();
 }
 
 /**

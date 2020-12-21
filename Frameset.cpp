@@ -25,7 +25,7 @@ Frameset::Frameset(XmlDocument xmlDocument) {
     id = move(element->getAttributeValue("id"));
     argument = element->getFirstChild();
     while (argument != nullptr){
-        FramesetArgument framesetArgument = FramesetArgument(argument->getAttributeValue("name"), argument->getPcData());
+        FramesetArgument framesetArgument = FramesetArgument(argument->getAttributeValue("name"), argument->getPcData(), argument->getAttributeValue("function"));
         framesetArguments.push_back(framesetArgument);
         argument = argument->getNextSibling();
     }
@@ -53,7 +53,7 @@ bool Frameset::containsArgument(ArgumentType argumentType) {
  * @param type  Type of the new {@link FramesetArgument}
  * @param definition Definition of the new {@link FramesetArgument}
  */
-void Frameset::addArgument(string type, string definition) {
+void Frameset::addArgument(string type, string definition, string function) {
     bool check = false;
     for (FramesetArgument a : framesetArguments) {
         if (a.getArgumentType() == type) {
@@ -63,7 +63,7 @@ void Frameset::addArgument(string type, string definition) {
         }
     }
     if (!check) {
-        FramesetArgument arg = FramesetArgument(type, definition);
+        FramesetArgument arg = FramesetArgument(type, definition, function);
         framesetArguments.push_back(arg);
     }
 }

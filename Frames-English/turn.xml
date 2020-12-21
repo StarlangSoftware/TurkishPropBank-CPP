@@ -16,7 +16,7 @@
         <role descr="start state" f="vsp" n="3"/>
       </roles>
     </roleset>
-    <roleset id="turn.03" name="idiomatic: turn thumbs down on = reject">
+    <roleset id="turn.03" name="idiomatic: turn thumbs down on, reject">
       <roles>
         <role descr="rejecter" f="pag" n="0"/>
         <role descr="thumbs" f="ppt" n="1"/>

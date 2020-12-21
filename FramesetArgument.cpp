@@ -10,9 +10,10 @@
  * @param argumentType  ArgumentType of the frameset argument
  * @param definition  Definition of the frameset argument
  */
-FramesetArgument::FramesetArgument(string argumentType, string definition) {
+FramesetArgument::FramesetArgument(string argumentType, string definition, string function) {
     this->argumentType = move(argumentType);
     this->definition = move(definition);
+    this->function = move(function);
 }
 
 /**
@@ -34,12 +35,30 @@ string FramesetArgument::getDefinition() {
 }
 
 /**
+ * Accessor for function.
+ *
+ * @return function.
+ */
+string FramesetArgument::getFunction() {
+    return function;
+}
+
+/**
  * Mutator for definition.
  *
  * @param definition to set.
  */
 void FramesetArgument::setDefinition(string definition) {
     this->definition = move(definition);
+}
+
+/**
+ * Mutator for definition.
+ *
+ * @param definition to set.
+ */
+void FramesetArgument::setFunction(string function) {
+    this->function = move(function);
 }
 
 /**

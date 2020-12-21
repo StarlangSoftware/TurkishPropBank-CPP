@@ -3,6 +3,7 @@
 //
 #include <string>
 #include <fstream>
+#include <iostream>
 #include "FramesetList.h"
 #include "XmlDocument.h"
 
@@ -27,7 +28,7 @@ FramesetList::FramesetList() {
  * @return the size of the frames {@link ArrayList}.
  */
 unsigned long FramesetList::size() {
-    return frames.capacity();
+    return frames.size();
 }
 
 /**
@@ -89,7 +90,7 @@ map<ArgumentType, string> FramesetList::readFromXML(string synSetId) {
     map<ArgumentType, string> frameset;
     for (Frameset frame : frames){
         if (frame.getId() == synSetId){
-            for (unsigned long i = 0; i < frame.getFramesetArguments().capacity(); i++){
+            for (unsigned long i = 0; i < frame.getFramesetArguments().size(); i++){
                 frameset.insert_or_assign(getArguments(frame.getFramesetArguments().at(i).getArgumentType()), frame.getFramesetArguments().at(i).getDefinition());
             }
         }

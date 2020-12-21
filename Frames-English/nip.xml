@@ -15,7 +15,7 @@
         <role descr="source" f="dir" n="2"/>
       </roles>
     </roleset>
-    <roleset id="nip.03" name="nip_in_the_bud: fixed. = prevent, cause to end">
+    <roleset id="nip.03" name="nip_in_the_bud: fixed. prevent, cause to end">
       <roles>
         <role descr="preventative nipper" f="pag" n="0"/>
         <role descr="thing nipped, prevented" f="ppt" n="1"/>

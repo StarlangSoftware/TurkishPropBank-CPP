@@ -3,6 +3,7 @@
 //
 #include <string>
 #include <fstream>
+#include <iostream>
 #include "PredicateList.h"
 #include "XmlDocument.h"
 

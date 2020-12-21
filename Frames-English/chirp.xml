@@ -7,7 +7,7 @@
     </roleset>
     <roleset id="chirp.02" name="to make a similar sound in speech">
       <roles>
-        <role descr="chirp=er" f="pag" n="0"/>
+        <role descr="chirp-er" f="pag" n="0"/>
       </roles>
     </roleset>
   </predicate>

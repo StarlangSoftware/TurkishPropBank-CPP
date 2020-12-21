@@ -20,7 +20,7 @@
       </roles>
     </roleset>
   </predicate>
-  <predicate lemma='colorcode'>
+  <predicate lemma="colorcode">
     <roleset id="colorcode.03" name="label by color">
       <roles>
         <role descr="color coder" f="pag" n="0"/>

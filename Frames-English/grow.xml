@@ -12,7 +12,7 @@
     <roleset id="grow.02" name="become">
       <roles>
         <role descr="thing becoming" f="ppt" n="1"/>
-        <role descr="thing become = end state of arg1" f="prd" n="2"/>
+        <role descr="thing become - end state of arg1" f="prd" n="2"/>
         <role descr="source, start point" f="loc" n="3"/>
       </roles>
     

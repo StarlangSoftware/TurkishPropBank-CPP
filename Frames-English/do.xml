@@ -1,7 +1,7 @@
 <frameset>
   <predicate lemma="do">
     <roleset id="do.01" name="auxiliary">
-        <roles/>
+        <roles></roles>
     </roleset>
     <roleset id="do.02" name="act">
       <roles>

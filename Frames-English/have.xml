@@ -1,10 +1,10 @@
 <frameset>
   <predicate lemma="have">
     <roleset id="have.01" name="auxiliary">
-        <roles/>
+        <roles></roles>
     </roleset>
     <roleset id="have.02" name="modal">
-        <roles/>
+        <roles></roles>
     </roleset>
 	
     <roleset id="have.03" name="own, possess">
