@@ -48,3 +48,31 @@ Result: The imported project is listed in the Project Explorer view and files ar
 
 After being done with the downloading and opening project, select **Build Project** option from **Build** menu. After compilation process, user can run TestPropbank.cpp.
 
+Detailed Description
+============
+
++ [FramesetList](#framesetlist)
++ [Frameset](#frameset)
+
+## FramesetList
+
+Frame listesini okumak ve tüm Frameleri hafızada tutmak için
+
+	a = FramesetList();
+
+Framesetleri tek tek gezmek için
+
+	for (int i = 0; i < a.size(); i++){
+		Frameset frameset = a.getFrameset(i);
+	}
+
+Bir fiile ait olan Frameseti bulmak için
+
+	frameset = a.getFrameSet("TUR10-1234560")
+
+## Frameset
+
+Bir framesetin tüm argümanlarını bulmak için
+
+	List<FramesetArgument> getFramesetArguments()
+
