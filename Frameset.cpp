@@ -18,12 +18,9 @@ Frameset::Frameset(string id) {
  *
  * @param xmlDocument  inputStream to read frameset
  */
-Frameset::Frameset(XmlDocument xmlDocument) {
-    XmlElement* element, *argument;
-    xmlDocument.parse();
-    element = xmlDocument.getFirstChild();
-    id = move(element->getAttributeValue("id"));
-    argument = element->getFirstChild();
+Frameset::Frameset(XmlElement* frameSetNode) {
+    id = move(frameSetNode->getAttributeValue("id"));
+    XmlElement* argument = frameSetNode->getFirstChild();
     while (argument != nullptr){
         FramesetArgument framesetArgument = FramesetArgument(argument->getAttributeValue("name"), argument->getPcData(), argument->getAttributeValue("function"));
         framesetArguments.push_back(framesetArgument);

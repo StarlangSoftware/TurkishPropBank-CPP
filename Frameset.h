@@ -18,7 +18,7 @@ private:
     vector<FramesetArgument> framesetArguments;
 public:
     explicit Frameset(string id);
-    explicit Frameset(XmlDocument xmlDocument);
+    explicit Frameset(XmlElement* frameSetNode);
     bool containsArgument(ArgumentType argumentType);
     void addArgument(string type, string definition, string function);
     void deleteArgument(string type, string definition);

@@ -31,15 +31,12 @@ Predicate PredicateList::getPredicate(string lemma) {
  * file inside that folder, the constructor creates a Predicate and puts in inside the list {@link HashMap}.
  */
 PredicateList::PredicateList() {
-    ifstream inputStream;
-    string fileName;
-    XmlElement *frameSetNode, *predicateNode, *roleSetNode, *rolesNode, *roleNode;
-    inputStream.open("../files-english.txt", ifstream::in);
-    while (inputStream.good()){
-        getline(inputStream, fileName);
-        XmlDocument xmlDocument("../Frames-English/" + fileName);
-        xmlDocument.parse();
-        frameSetNode = xmlDocument.getFirstChild();
+    XmlElement *framesNode, *frameSetNode, *predicateNode, *roleSetNode, *rolesNode, *roleNode;
+    XmlDocument xmlDocument("../english-propbank.xml");
+    xmlDocument.parse();
+    framesNode = xmlDocument.getFirstChild();
+    frameSetNode = framesNode->getFirstChild();
+    while (frameSetNode != nullptr){
         predicateNode = frameSetNode->getFirstChild();
         while (predicateNode != nullptr){
             if (predicateNode->hasAttributes()){
@@ -72,8 +69,8 @@ PredicateList::PredicateList() {
             }
             predicateNode = predicateNode->getNextSibling();
         }
+        frameSetNode = frameSetNode->getNextSibling();
     }
-    inputStream.close();
 }
 
 /**

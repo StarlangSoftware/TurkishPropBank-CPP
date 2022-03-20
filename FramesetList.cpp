@@ -12,14 +12,15 @@
  * filename inside that file, the constructor creates a Frameset and puts in inside the frames {@link ArrayList}.
  */
 FramesetList::FramesetList() {
-    ifstream inputStream;
-    string fileName;
-    inputStream.open("../files-turkish.txt", ifstream::in);
-    while (inputStream.good()){
-        getline(inputStream, fileName);
-        addFrameset(Frameset(XmlDocument("../Frames-Turkish/" + fileName)));
+    XmlElement* framesNode, *frameSetNode;
+    XmlDocument doc = XmlDocument("../turkish-propbank.xml");
+    doc.parse();
+    framesNode = doc.getFirstChild();
+    frameSetNode = framesNode->getFirstChild();
+    while (frameSetNode != nullptr){
+        addFrameset(Frameset(frameSetNode));
+        frameSetNode = frameSetNode->getNextSibling();
     }
-    inputStream.close();
 }
 
 /**
