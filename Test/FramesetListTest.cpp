@@ -25,7 +25,7 @@ TEST_CASE("FramesetList-testArgName") {
     map<string, int> nameList = map<string, int>();
     for (int i = 0; i < framesetList.size(); i++){
         for (FramesetArgument argument : framesetList.getFrameset(i).getFramesetArguments()){
-            if (nameList.find(argument.getArgumentType()) != nameList.end()){
+            if (nameList.contains(argument.getArgumentType())){
                 nameList[argument.getArgumentType()] = nameList[argument.getArgumentType()] + 1;
             } else {
                 nameList[argument.getArgumentType()] = 1;
@@ -44,7 +44,7 @@ TEST_CASE("FramesetList-testArgFunction") {
     map<string, int> functionList = map<string, int>();
     for (int i = 0; i < framesetList.size(); i++){
         for (FramesetArgument argument : framesetList.getFrameset(i).getFramesetArguments()){
-            if (functionList.find(argument.getFunction()) != functionList.end()){
+            if (functionList.contains(argument.getFunction())){
                 functionList[argument.getFunction()] = functionList[argument.getFunction()] + 1;
             } else {
                 functionList[argument.getFunction()] = 1;

@@ -37,7 +37,7 @@ TEST_CASE("PredicateList-testFunction") {
         for (int i = 0; i < predicateList.getPredicate(lemma).size(); i++){
             for (int j = 0; j < predicateList.getPredicate(lemma).getRoleSet(i).size(); j++){
                 string function = predicateList.getPredicate(lemma).getRoleSet(i).getRole(j).getF();
-                if (functionList.find(function) != functionList.end()){
+                if (functionList.contains(function)){
                     functionList[function] = functionList[function] + 1;
                 } else {
                     functionList[function] = 1;
@@ -70,7 +70,7 @@ TEST_CASE("PredicateList-testN") {
         for (int i = 0; i < predicateList.getPredicate(lemma).size(); i++){
             for (int j = 0; j < predicateList.getPredicate(lemma).getRoleSet(i).size(); j++){
                 string n = predicateList.getPredicate(lemma).getRoleSet(i).getRole(j).getN();
-                if (nList.find(n) != nList.end()){
+                if (nList.contains(n)){
                     nList[n] = nList[n] + 1;
                 } else {
                     nList[n] = 1;
