@@ -3,7 +3,7 @@
 //
 
 #include "catch.hpp"
-#include "../PredicateList.h"
+#include "../src/PredicateList.h"
 
 TEST_CASE("PredicateList-testPredicateSize") {
     PredicateList predicateList = PredicateList();

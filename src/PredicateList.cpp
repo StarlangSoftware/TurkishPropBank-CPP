@@ -32,7 +32,7 @@ Predicate PredicateList::getPredicate(string lemma) {
  */
 PredicateList::PredicateList() {
     XmlElement *framesNode, *frameSetNode, *predicateNode, *roleSetNode, *rolesNode, *roleNode;
-    XmlDocument xmlDocument("../english-propbank.xml");
+    XmlDocument xmlDocument("english-propbank.xml");
     xmlDocument.parse();
     framesNode = xmlDocument.getFirstChild();
     frameSetNode = framesNode->getFirstChild();

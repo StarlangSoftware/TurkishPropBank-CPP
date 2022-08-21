@@ -3,7 +3,7 @@
 //
 
 #include "catch.hpp"
-#include "../ArgumentType.h"
+#include "../src/ArgumentType.h"
 
 TEST_CASE("ArgumentTypeTest-testArgumentType") {
     REQUIRE(getArguments("") == ArgumentType::NONE);

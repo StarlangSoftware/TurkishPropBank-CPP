@@ -4,7 +4,7 @@
 
 #define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
 #include "catch.hpp"
-#include "../FramesetList.h"
+#include "../src/FramesetList.h"
 
 TEST_CASE("FramesetList-testFrames") {
     FramesetList framesetList = FramesetList();

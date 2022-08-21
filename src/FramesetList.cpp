@@ -13,7 +13,7 @@
  */
 FramesetList::FramesetList() {
     XmlElement* framesNode, *frameSetNode;
-    XmlDocument doc = XmlDocument("../turkish-propbank.xml");
+    XmlDocument doc = XmlDocument("turkish-propbank.xml");
     doc.parse();
     framesNode = doc.getFirstChild();
     frameSetNode = framesNode->getFirstChild();
