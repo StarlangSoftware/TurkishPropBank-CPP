@@ -15,6 +15,7 @@ enum class ArgumentType {
     NONE, PREDICATE, ARG0, ARG1, ARG2, ARG3, ARG4, ARG5, ARGMNONE, ARGMEXT, ARGMLOC, ARGMDIS, ARGMADV, ARGMCAU, ARGMTMP, ARGMPNC, ARGMMNR, ARGMDIR
 };
 
+using namespace std;
 /**
  * The getArguments method takes an argumentsType string and returns the {@link ArgumentType} form of it.
  *
@@ -22,7 +23,10 @@ enum class ArgumentType {
  * @return Type of the argument in {@link ArgumentType} form
  */
 static ArgumentType getArguments(string argumentsType){
-    std::transform(argumentsType.begin(), argumentsType.end(), argumentsType.begin(), [](unsigned char c){ return std::toupper(c); });
+    transform(argumentsType.begin(),
+                   argumentsType.end(),
+                   argumentsType.begin(),
+                   ::toupper);
     if (argumentsType.empty()){
         return ArgumentType::NONE;
     } else {

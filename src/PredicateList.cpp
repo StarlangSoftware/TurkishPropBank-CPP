@@ -79,9 +79,8 @@ PredicateList::PredicateList() {
  */
 unordered_set<string> PredicateList::getLemmaList() {
     unordered_set<string> lemmaList;
-    map<string, Predicate>::const_iterator iterator;
-    for (iterator = list.begin(); iterator != list.end(); iterator++){
-        lemmaList.insert(iterator->first);
+    for (auto& iterator : list){
+        lemmaList.insert(iterator.first);
     }
     return lemmaList;
 }
