@@ -5,15 +5,15 @@
 #include "RoleSet.h"
 
 /**
- * A constructor of {@link RoleSet} class which takes id and name as inputs and initializes corresponding attributes
+ * A constructor of {@link RoleSet} class which takes _id and _name as inputs and initializes corresponding attributes
  * with these inputs.
  *
- * @param id  Id of the roleSet
- * @param name Name of the roleSet
+ * @param _id  Id of the roleSet
+ * @param _name Name of the roleSet
  */
-RoleSet::RoleSet(string id, string name) {
-    this->id = move(id);
-    this->name = move(name);
+RoleSet::RoleSet(const string& _id, const string& _name) {
+    this->id = _id;
+    this->name = _name;
 }
 
 /**
@@ -39,7 +39,7 @@ string RoleSet::getName() {
  *
  * @param role  Role to be added
  */
-void RoleSet::addRole(Role role) {
+void RoleSet::addRole(const Role& role) {
     roles.push_back(role);
 }
 
@@ -68,7 +68,7 @@ unsigned long RoleSet::size() {
  * @param n Argument number
  * @return The role with the given argument number n.
  */
-Role RoleSet::getRoleWithArgument(string n){
+Role RoleSet::getRoleWithArgument(const string& n){
     for (auto role : roles){
         if (role.getN() == n){
             return role;

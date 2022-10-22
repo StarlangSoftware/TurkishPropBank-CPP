@@ -17,14 +17,14 @@ private:
     string id;
     vector<FramesetArgument> framesetArguments;
 public:
-    explicit Frameset(string id);
+    explicit Frameset(const string& _id);
     explicit Frameset(XmlElement* frameSetNode);
     bool containsArgument(ArgumentType argumentType);
-    void addArgument(string type, string definition, string function);
-    void deleteArgument(string type, string definition);
+    void addArgument(const string& type, const string& definition, const string& function);
+    void deleteArgument(const string& type, const string& definition);
     vector<FramesetArgument> getFramesetArguments();
     string getId();
-    void setId(string id);
+    void setId(const string& _id);
 };
 
 

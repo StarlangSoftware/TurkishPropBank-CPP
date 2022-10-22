@@ -17,7 +17,7 @@ private:
 public:
     PredicateList();
     unsigned long size();
-    Predicate getPredicate(string lemma);
+    Predicate getPredicate(const string& lemma);
     unordered_set<string> getLemmaList();
 };
 

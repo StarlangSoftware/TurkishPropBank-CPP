@@ -5,12 +5,12 @@
 #include "Frameset.h"
 
 /**
- * A constructor of {@link Frameset} class which takes id as input and initializes corresponding attribute
+ * A constructor of {@link Frameset} class which takes _id as input and initializes corresponding attribute
  *
- * @param id  Id of the frameset
+ * @param _id  Id of the frameset
  */
-Frameset::Frameset(string id) {
-    this->id = move(id);
+Frameset::Frameset(const string& _id) {
+    this->id = _id;
 }
 
 /**
@@ -19,7 +19,7 @@ Frameset::Frameset(string id) {
  * @param xmlDocument  inputStream to read frameset
  */
 Frameset::Frameset(XmlElement* frameSetNode) {
-    id = move(frameSetNode->getAttributeValue("id"));
+    id = frameSetNode->getAttributeValue("id");
     XmlElement* argument = frameSetNode->getFirstChild();
     while (argument != nullptr){
         FramesetArgument framesetArgument = FramesetArgument(argument->getAttributeValue("name"), argument->getPcData(), argument->getAttributeValue("function"));
@@ -50,7 +50,7 @@ bool Frameset::containsArgument(ArgumentType argumentType) {
  * @param type  Type of the new {@link FramesetArgument}
  * @param definition Definition of the new {@link FramesetArgument}
  */
-void Frameset::addArgument(string type, string definition, string function) {
+void Frameset::addArgument(const string& type, const string& definition, const string& function) {
     bool check = false;
     for (FramesetArgument a : framesetArguments) {
         if (a.getArgumentType() == type) {
@@ -72,15 +72,17 @@ void Frameset::addArgument(string type, string definition, string function) {
  * @param type  Type of the to be deleted {@link FramesetArgument}
  * @param definition Definition of the to be deleted {@link FramesetArgument}
  */
-void Frameset::deleteArgument(string type, string definition) {
-    int index;
+void Frameset::deleteArgument(const string& type, const string& definition) {
+    int index = -1;
     for (int i = 0; i < framesetArguments.size(); i++) {
         if (framesetArguments.at(i).getArgumentType() == type && framesetArguments.at(i).getDefinition() == definition) {
             index = i;
             break;
         }
     }
-    framesetArguments.erase(framesetArguments.begin() + index);
+    if (index != -1){
+        framesetArguments.erase(framesetArguments.begin() + index);
+    }
 }
 
 /**
@@ -102,10 +104,10 @@ string Frameset::getId() {
 }
 
 /**
- * Mutator for id.
+ * Mutator for _id.
  *
- * @param id to set.
+ * @param _id to set.
  */
-void Frameset::setId(string id) {
-    this->id = move(id);
+void Frameset::setId(const string& _id) {
+    this->id = _id;
 }

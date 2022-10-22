@@ -14,12 +14,12 @@ private:
     string definition;
     string function;
 public:
-    FramesetArgument(string argumentType, string definition, string function);
+    FramesetArgument(const string& _argumentType, const string& _definition, const string& _function);
     string getArgumentType();
     string getDefinition();
     string getFunction();
-    void setDefinition(string definition);
-    void setFunction(string function);
+    void setDefinition(const string& _definition);
+    void setFunction(const string& _function);
     string to_string();
 };
 

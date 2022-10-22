@@ -12,7 +12,7 @@ using namespace std;
  *
  * @param argument  Argument string containing the argumentType and id
  */
-Argument::Argument(string argument) {
+Argument::Argument(const string& argument) {
     if (argument.find('$') != string::npos){
         argumentType = argument.substr(0, argument.find('$'));
         id = argument.substr(argument.find('$') + 1);
@@ -22,14 +22,14 @@ Argument::Argument(string argument) {
 }
 
 /**
- * Another constructor of {@link Argument} class which takes argumentType and id as inputs and initializes corresponding attributes
+ * Another constructor of {@link Argument} class which takes _argumentType and _id as inputs and initializes corresponding attributes
  *
- * @param argumentType  Type of the argument
- * @param id  Id of the argument
+ * @param _argumentType  Type of the argument
+ * @param _id  Id of the argument
  */
-Argument::Argument(string argumentType, string id) {
-    this->argumentType = move(argumentType);
-    this->id = move(id);
+Argument::Argument(const string& _argumentType, const string& _id) {
+    this->argumentType = _argumentType;
+    this->id = _id;
 }
 
 /**

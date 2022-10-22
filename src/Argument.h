@@ -13,8 +13,8 @@ private:
     string argumentType;
     string id;
 public:
-    Argument(string argument);
-    Argument(string argumentType, string id);
+    explicit Argument(const string& argument);
+    Argument(const string& _argumentType, const string& _id);
     string getArgumentType();
     string getId();
     string to_string();

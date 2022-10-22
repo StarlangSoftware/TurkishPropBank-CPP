@@ -22,7 +22,7 @@ unsigned long PredicateList::size() {
  * @param lemma  Lemma of the searched predicate
  * @return {@link Predicate} which has the given lemma.
  */
-Predicate PredicateList::getPredicate(string lemma) {
+Predicate PredicateList::getPredicate(const string& lemma) {
     return list.find(lemma)->second;
 }
 

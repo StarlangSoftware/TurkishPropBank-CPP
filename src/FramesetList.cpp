@@ -2,8 +2,6 @@
 // Created by Olcay Taner Yıldız on 20.10.2018.
 //
 #include <string>
-#include <fstream>
-#include <iostream>
 #include "FramesetList.h"
 #include "XmlDocument.h"
 
@@ -47,7 +45,7 @@ Frameset FramesetList::getFrameset(unsigned long index) {
  *
  * @param frameset  Frameset to be added
  */
-void FramesetList::addFrameset(Frameset frameset) {
+void FramesetList::addFrameset(const Frameset& frameset) {
     frames.push_back(frameset);
 }
 
@@ -57,7 +55,7 @@ void FramesetList::addFrameset(Frameset frameset) {
  * @param synSetId  Id of the searched {@link Frameset}
  * @return {@link Frameset} which has the given id.
  */
-Frameset FramesetList::getFrameset(string synSetId) {
+Frameset FramesetList::getFrameset(const string& synSetId) {
     for (Frameset frame : frames){
         if (frame.getId() == synSetId){
             return frame;
@@ -71,7 +69,7 @@ Frameset FramesetList::getFrameset(string synSetId) {
  * @param synSetId  Id of the searched {@link Frameset}
  * @return true if the {@link Frameset} with the given id exists, false otherwise.
  */
-bool FramesetList::frameExists(string synSetId) {
+bool FramesetList::frameExists(const string& synSetId) {
     for (Frameset frame : frames){
         if (frame.getId() == synSetId){
             return true;
@@ -87,7 +85,7 @@ bool FramesetList::frameExists(string synSetId) {
  * @param synSetId  Id of the searched {@link Frameset}
  * @return an {@link HashMap} containing the arguments of the searched {@link Frameset}
  */
-map<ArgumentType, string> FramesetList::readFromXML(string synSetId) {
+map<ArgumentType, string> FramesetList::readFromXML(const string& synSetId) {
     map<ArgumentType, string> frameset;
     for (Frameset frame : frames){
         if (frame.getId() == synSetId){

@@ -5,15 +5,15 @@
 #include "FramesetArgument.h"
 
 /**
- * A constructor of {@link FramesetArgument} class which takes argumentType and definition as input and initializes corresponding attributes
+ * A constructor of {@link FramesetArgument} class which takes _argumentType and _definition as input and initializes corresponding attributes
  *
- * @param argumentType  ArgumentType of the frameset argument
- * @param definition  Definition of the frameset argument
+ * @param _argumentType  ArgumentType of the frameset argument
+ * @param _definition  Definition of the frameset argument
  */
-FramesetArgument::FramesetArgument(string argumentType, string definition, string function) {
-    this->argumentType = move(argumentType);
-    this->definition = move(definition);
-    this->function = move(function);
+FramesetArgument::FramesetArgument(const string& _argumentType, const string& _definition, const string& _function) {
+    this->argumentType = _argumentType;
+    this->definition = _definition;
+    this->function = _function;
 }
 
 /**
@@ -44,12 +44,12 @@ string FramesetArgument::getFunction() {
 }
 
 /**
- * Mutator for definition.
+ * Mutator for _definition.
  *
- * @param definition to set.
+ * @param _definition to set.
  */
-void FramesetArgument::setDefinition(string definition) {
-    this->definition = move(definition);
+void FramesetArgument::setDefinition(const string& _definition) {
+    this->definition = _definition;
 }
 
 /**
@@ -57,8 +57,8 @@ void FramesetArgument::setDefinition(string definition) {
  *
  * @param definition to set.
  */
-void FramesetArgument::setFunction(string function) {
-    this->function = move(function);
+void FramesetArgument::setFunction(const string& _function) {
+    this->function = _function;
 }
 
 /**

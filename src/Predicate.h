@@ -15,12 +15,12 @@ private:
     string lemma;
     vector<RoleSet> roleSets;
 public:
-    Predicate(string lemma);
+    explicit Predicate(const string& _lemma);
     string getLemma();
-    void addRoleSet(RoleSet roleSet);
+    void addRoleSet(const RoleSet& roleSet);
     unsigned long size();
     RoleSet getRoleSet(unsigned long index);
-    RoleSet getRoleSet(string roleId);
+    RoleSet getRoleSet(const string& roleId);
 };
 
 

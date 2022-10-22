@@ -7,16 +7,16 @@
 #include "Role.h"
 
 /**
- * A constructor of {@link Role} class which takes description, f, and n as inputs and initializes corresponding with these inputs.
+ * A constructor of {@link Role} class which takes _description, _f, and _n as inputs and initializes corresponding with these inputs.
  *
- * @param description  Description of the role
- * @param f  Argument Type of the role
- * @param n  Number of the role
+ * @param _description  Description of the role
+ * @param _f  Argument Type of the role
+ * @param _n  Number of the role
  */
-Role::Role(string description, string f, string n) {
-    this->description = move(description);
-    this->f = move(f);
-    this->n = move(n);
+Role::Role(const string& _description, const string& _f, const string& _n) {
+    this->description = _description;
+    this->f = _f;
+    this->n = _n;
 }
 
 /**

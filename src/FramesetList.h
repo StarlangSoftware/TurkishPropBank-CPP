@@ -17,10 +17,10 @@ public:
     FramesetList();
     unsigned long size();
     Frameset getFrameset(unsigned long index);
-    void addFrameset(Frameset frameset);
-    Frameset getFrameset(string synSetId);
-    bool frameExists(string synSetId);
-    map<ArgumentType, string> readFromXML(string synSetId);
+    void addFrameset(const Frameset& frameset);
+    Frameset getFrameset(const string& synSetId);
+    bool frameExists(const string& synSetId);
+    map<ArgumentType, string> readFromXML(const string& synSetId);
 };
 
 

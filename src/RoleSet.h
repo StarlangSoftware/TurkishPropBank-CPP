@@ -16,13 +16,13 @@ private:
     string name;
     vector<Role> roles;
 public:
-    RoleSet(string id, string name);
+    RoleSet(const string& _id, const string& _name);
     string getId();
     string getName();
-    void addRole(Role role);
+    void addRole(const Role& role);
     Role getRole(int index);
     unsigned long size();
-    Role getRoleWithArgument(string n);
+    Role getRoleWithArgument(const string& n);
 };
 
 

@@ -15,7 +15,7 @@ private:
     string f;
     string n;
 public:
-    Role(string description, string f, string n);
+    Role(const string& _description, const string& _f, const string& _n);
     string getDescription();
     string getF();
     string getN();

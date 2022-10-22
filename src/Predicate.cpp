@@ -5,13 +5,13 @@
 #include "Predicate.h"
 
 /**
- * A constructor of {@link Predicate} class which takes lemma as input and initializes lemma with this input.
+ * A constructor of {@link Predicate} class which takes _lemma as input and initializes _lemma with this input.
  * The constructor also initializes the roleSets array.
  *
- * @param lemma  Lemma of the predicate
+ * @param _lemma  Lemma of the predicate
  */
-Predicate::Predicate(string lemma) {
-    this->lemma = move(lemma);
+Predicate::Predicate(const string& _lemma) {
+    this->lemma = _lemma;
 }
 
 /**
@@ -28,7 +28,7 @@ string Predicate::getLemma() {
  *
  * @param roleSet  RoleSet to be added
  */
-void Predicate::addRoleSet(RoleSet roleSet) {
+void Predicate::addRoleSet(const RoleSet& roleSet) {
     roleSets.push_back(roleSet);
 }
 
@@ -57,7 +57,7 @@ RoleSet Predicate::getRoleSet(unsigned long index) {
  * @param roleId  Id of the searched roleSet
  * @return {@link RoleSet} which has the given id.
  */
-RoleSet Predicate::getRoleSet(string roleId) {
+RoleSet Predicate::getRoleSet(const string& roleId) {
     for (RoleSet roleSet : roleSets){
         if (roleSet.getId() == roleId){
             return roleSet;
