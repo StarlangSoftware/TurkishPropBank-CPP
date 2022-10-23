@@ -37,7 +37,7 @@ Argument::Argument(const string& _argumentType, const string& _id) {
  *
  * @return argumentType.
  */
-string Argument::getArgumentType() {
+string Argument::getArgumentType() const{
     return argumentType;
 }
 
@@ -46,7 +46,7 @@ string Argument::getArgumentType() {
  *
  * @return id.
  */
-string Argument::getId() {
+string Argument::getId() const{
     return id;
 }
 
@@ -56,7 +56,7 @@ string Argument::getId() {
  *
  * @return string form of argument
  */
-string Argument::to_string() {
+string Argument::to_string() const{
     if (argumentType == "NONE"){
         return argumentType;
     } else {

@@ -15,12 +15,12 @@ private:
     string function;
 public:
     FramesetArgument(const string& _argumentType, const string& _definition, const string& _function);
-    string getArgumentType();
-    string getDefinition();
-    string getFunction();
+    string getArgumentType() const;
+    string getDefinition() const;
+    string getFunction() const;
     void setDefinition(const string& _definition);
     void setFunction(const string& _function);
-    string to_string();
+    string to_string() const;
 };
 
 

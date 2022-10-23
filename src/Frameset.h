@@ -19,11 +19,11 @@ private:
 public:
     explicit Frameset(const string& _id);
     explicit Frameset(XmlElement* frameSetNode);
-    bool containsArgument(ArgumentType argumentType);
+    bool containsArgument(ArgumentType argumentType) const;
     void addArgument(const string& type, const string& definition, const string& function);
     void deleteArgument(const string& type, const string& definition);
-    vector<FramesetArgument> getFramesetArguments();
-    string getId();
+    vector<FramesetArgument> getFramesetArguments() const;
+    string getId() const;
     void setId(const string& _id);
 };
 

@@ -21,7 +21,7 @@ RoleSet::RoleSet(const string& _id, const string& _name) {
  *
  * @return id.
  */
-string RoleSet::getId() {
+string RoleSet::getId() const{
     return id;
 }
 
@@ -30,7 +30,7 @@ string RoleSet::getId() {
  *
  * @return name.
  */
-string RoleSet::getName() {
+string RoleSet::getName() const{
     return name;
 }
 
@@ -49,7 +49,7 @@ void RoleSet::addRole(const Role& role) {
  * @param index  Index of the role
  * @return {@link Role} at the given index.
  */
-Role RoleSet::getRole(int index) {
+Role RoleSet::getRole(int index) const{
     return roles.at(index);
 }
 
@@ -58,7 +58,7 @@ Role RoleSet::getRole(int index) {
  *
  * @return the size of the roles {@link ArrayList}.
  */
-unsigned long RoleSet::size() {
+unsigned long RoleSet::size() const{
     return roles.size();
 }
 
@@ -68,7 +68,7 @@ unsigned long RoleSet::size() {
  * @param n Argument number
  * @return The role with the given argument number n.
  */
-Role RoleSet::getRoleWithArgument(const string& n){
+Role RoleSet::getRoleWithArgument(const string& n) const{
     for (auto role : roles){
         if (role.getN() == n){
             return role;

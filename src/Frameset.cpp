@@ -34,7 +34,7 @@ Frameset::Frameset(XmlElement* frameSetNode) {
  * @param argumentType  ArgumentType of the searched {@link Argument}
  * @return true if the {@link Argument} with the given argumentType exists, false otherwise.
  */
-bool Frameset::containsArgument(ArgumentType argumentType) {
+bool Frameset::containsArgument(ArgumentType argumentType) const{
     for (FramesetArgument framesetArgument : framesetArguments){
         if (getArguments(framesetArgument.getArgumentType()) == argumentType){
             return true;
@@ -90,7 +90,7 @@ void Frameset::deleteArgument(const string& type, const string& definition) {
  *
  * @return framesetArguments.
  */
-vector<FramesetArgument> Frameset::getFramesetArguments() {
+vector<FramesetArgument> Frameset::getFramesetArguments() const{
     return framesetArguments;
 }
 
@@ -99,7 +99,7 @@ vector<FramesetArgument> Frameset::getFramesetArguments() {
  *
  * @return id.
  */
-string Frameset::getId() {
+string Frameset::getId() const{
     return id;
 }
 

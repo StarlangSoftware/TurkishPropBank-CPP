@@ -26,7 +26,7 @@ FramesetList::FramesetList() {
  *
  * @return the size of the frames {@link ArrayList}.
  */
-unsigned long FramesetList::size() {
+unsigned long FramesetList::size() const{
     return frames.size();
 }
 
@@ -36,7 +36,7 @@ unsigned long FramesetList::size() {
  * @param index  Index of the frameset
  * @return {@link Frameset} at the given index.
  */
-Frameset FramesetList::getFrameset(unsigned long index) {
+Frameset FramesetList::getFrameset(unsigned long index) const{
     return frames.at(index);
 }
 
@@ -55,7 +55,7 @@ void FramesetList::addFrameset(const Frameset& frameset) {
  * @param synSetId  Id of the searched {@link Frameset}
  * @return {@link Frameset} which has the given id.
  */
-Frameset FramesetList::getFrameset(const string& synSetId) {
+Frameset FramesetList::getFrameset(const string& synSetId) const{
     for (Frameset frame : frames){
         if (frame.getId() == synSetId){
             return frame;
@@ -69,8 +69,8 @@ Frameset FramesetList::getFrameset(const string& synSetId) {
  * @param synSetId  Id of the searched {@link Frameset}
  * @return true if the {@link Frameset} with the given id exists, false otherwise.
  */
-bool FramesetList::frameExists(const string& synSetId) {
-    for (Frameset frame : frames){
+bool FramesetList::frameExists(const string& synSetId) const{
+    for (const Frameset& frame : frames){
         if (frame.getId() == synSetId){
             return true;
         }
@@ -87,7 +87,7 @@ bool FramesetList::frameExists(const string& synSetId) {
  */
 map<ArgumentType, string> FramesetList::readFromXML(const string& synSetId) {
     map<ArgumentType, string> frameset;
-    for (Frameset frame : frames){
+    for (const Frameset& frame : frames){
         if (frame.getId() == synSetId){
             for (unsigned long i = 0; i < frame.getFramesetArguments().size(); i++){
                 frameset.insert_or_assign(getArguments(frame.getFramesetArguments().at(i).getArgumentType()), frame.getFramesetArguments().at(i).getDefinition());

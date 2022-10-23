@@ -24,7 +24,7 @@ Role::Role(const string& _description, const string& _f, const string& _n) {
  *
  * @return description.
  */
-string Role::getDescription() {
+string Role::getDescription() const{
     return description;
 }
 
@@ -33,7 +33,7 @@ string Role::getDescription() {
  *
  * @return f.
  */
-string Role::getF() {
+string Role::getF() const{
     return f;
 }
 
@@ -42,7 +42,7 @@ string Role::getF() {
  *
  * @return n.
  */
-string Role::getN() {
+string Role::getN() const{
     return n;
 }
 
@@ -51,7 +51,8 @@ string Role::getN() {
  *
  * @return Argument type for this role.
  */
-ArgumentType Role::getArgumentType() {
-    transform(f.begin(), f.end(), f.begin(), ::toupper);
-    return getArguments("ARG" + f);
+ArgumentType Role::getArgumentType() const{
+    string tmp = f;
+    transform(tmp.begin(), tmp.end(), tmp.begin(), ::toupper);
+    return getArguments("ARG" + tmp);
 }

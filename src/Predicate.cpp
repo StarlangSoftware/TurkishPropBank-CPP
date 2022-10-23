@@ -19,7 +19,7 @@ Predicate::Predicate(const string& _lemma) {
  *
  * @return lemma.
  */
-string Predicate::getLemma() {
+string Predicate::getLemma() const{
     return lemma;
 }
 
@@ -37,7 +37,7 @@ void Predicate::addRoleSet(const RoleSet& roleSet) {
  *
  * @return the size of the roleSets {@link ArrayList}.
  */
-unsigned long Predicate::size() {
+unsigned long Predicate::size() const{
     return roleSets.size();
 }
 
@@ -47,7 +47,7 @@ unsigned long Predicate::size() {
  * @param index  Index of the roleSet
  * @return {@link RoleSet} at the given index.
  */
-RoleSet Predicate::getRoleSet(unsigned long index) {
+RoleSet Predicate::getRoleSet(unsigned long index) const{
     return roleSets.at(index);
 }
 
@@ -57,7 +57,7 @@ RoleSet Predicate::getRoleSet(unsigned long index) {
  * @param roleId  Id of the searched roleSet
  * @return {@link RoleSet} which has the given id.
  */
-RoleSet Predicate::getRoleSet(const string& roleId) {
+RoleSet Predicate::getRoleSet(const string& roleId) const{
     for (RoleSet roleSet : roleSets){
         if (roleSet.getId() == roleId){
             return roleSet;

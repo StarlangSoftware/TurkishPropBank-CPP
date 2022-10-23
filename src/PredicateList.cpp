@@ -12,7 +12,7 @@
  *
  * @return the size of the list {@link HashMap}.
  */
-unsigned long PredicateList::size() {
+unsigned long PredicateList::size() const{
     return list.size();
 }
 
@@ -22,7 +22,7 @@ unsigned long PredicateList::size() {
  * @param lemma  Lemma of the searched predicate
  * @return {@link Predicate} which has the given lemma.
  */
-Predicate PredicateList::getPredicate(const string& lemma) {
+Predicate PredicateList::getPredicate(const string& lemma) const{
     return list.find(lemma)->second;
 }
 
@@ -77,7 +77,7 @@ PredicateList::PredicateList() {
  * The method returns all lemma in the predicate list.
  * @return All lemma in the predicate list.
  */
-unordered_set<string> PredicateList::getLemmaList() {
+unordered_set<string> PredicateList::getLemmaList() const{
     unordered_set<string> lemmaList;
     for (auto& iterator : list){
         lemmaList.insert(iterator.first);

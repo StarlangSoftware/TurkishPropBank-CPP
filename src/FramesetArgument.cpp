@@ -21,7 +21,7 @@ FramesetArgument::FramesetArgument(const string& _argumentType, const string& _d
  *
  * @return argumentType.
  */
-string FramesetArgument::getArgumentType() {
+string FramesetArgument::getArgumentType() const{
     return argumentType;
 }
 
@@ -30,7 +30,7 @@ string FramesetArgument::getArgumentType() {
  *
  * @return definition.
  */
-string FramesetArgument::getDefinition() {
+string FramesetArgument::getDefinition() const{
     return definition;
 }
 
@@ -39,7 +39,7 @@ string FramesetArgument::getDefinition() {
  *
  * @return function.
  */
-string FramesetArgument::getFunction() {
+string FramesetArgument::getFunction() const{
     return function;
 }
 
@@ -67,6 +67,6 @@ void FramesetArgument::setFunction(const string& _function) {
  *
  * @return string form of frameset argument
  */
-string FramesetArgument::to_string() {
+string FramesetArgument::to_string() const{
     return argumentType + ":" + definition;
 }
