@@ -16,7 +16,7 @@ Frameset::Frameset(const string& _id) {
 /**
  * Another constructor of {@link Frameset} class which takes inputStream as input and reads the frameset
  *
- * @param xmlDocument  inputStream to read frameset
+ * @param frameSetNode Part of Xml node to read from
  */
 Frameset::Frameset(XmlElement* frameSetNode) {
     id = frameSetNode->getAttributeValue("id");
@@ -49,6 +49,7 @@ bool Frameset::containsArgument(ArgumentType argumentType) const{
  *
  * @param type  Type of the new {@link FramesetArgument}
  * @param definition Definition of the new {@link FramesetArgument}
+ * @param function Function of the new {@link FramesetArgument}
  */
 void Frameset::addArgument(const string& type, const string& definition, const string& function) {
     bool check = false;
