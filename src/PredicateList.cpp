@@ -10,25 +10,25 @@
 /**
  * The size method returns the number of predicates inside the list.
  *
- * @return the size of the list {@link HashMap}.
+ * @return the size of the list HashMap.
  */
 unsigned long PredicateList::size() const{
     return list.size();
 }
 
 /**
- * getPredicate method returns the {@link Predicate} with the given lemma.
+ * getPredicate method returns the Predicate with the given lemma.
  *
  * @param lemma  Lemma of the searched predicate
- * @return {@link Predicate} which has the given lemma.
+ * @return Predicate which has the given lemma.
  */
 Predicate PredicateList::getPredicate(const string& lemma) const{
     return list.find(lemma)->second;
 }
 
 /**
- * A constructor of {@link PredicateList} class which reads all predicate files inside the 'Frames' folder. For each
- * file inside that folder, the constructor creates a Predicate and puts in inside the list {@link HashMap}.
+ * A constructor of PredicateList class which reads all predicate files inside the 'Frames' folder. For each
+ * file inside that folder, the constructor creates a Predicate and puts in inside the list HashMap.
  */
 PredicateList::PredicateList() {
     XmlElement *framesNode, *frameSetNode, *predicateNode, *roleSetNode, *rolesNode, *roleNode;

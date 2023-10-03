@@ -5,7 +5,7 @@
 #include "Frameset.h"
 
 /**
- * A constructor of {@link Frameset} class which takes _id as input and initializes corresponding attribute
+ * A constructor of Frameset class which takes _id as input and initializes corresponding attribute
  *
  * @param _id  Id of the frameset
  */
@@ -14,7 +14,7 @@ Frameset::Frameset(const string& _id) {
 }
 
 /**
- * Another constructor of {@link Frameset} class which takes inputStream as input and reads the frameset
+ * Another constructor of Frameset class which takes inputStream as input and reads the frameset
  *
  * @param frameSetNode Part of Xml node to read from
  */
@@ -29,10 +29,10 @@ Frameset::Frameset(XmlElement* frameSetNode) {
 }
 
 /**
- * containsArgument method which checks if there is an {@link Argument} of the given argumentType.
+ * containsArgument method which checks if there is an Argument of the given argumentType.
  *
- * @param argumentType  ArgumentType of the searched {@link Argument}
- * @return true if the {@link Argument} with the given argumentType exists, false otherwise.
+ * @param argumentType  ArgumentType of the searched Argument
+ * @return true if the Argument with the given argumentType exists, false otherwise.
  */
 bool Frameset::containsArgument(ArgumentType argumentType) const{
     for (FramesetArgument framesetArgument : framesetArguments){
@@ -44,12 +44,12 @@ bool Frameset::containsArgument(ArgumentType argumentType) const{
 }
 
 /**
- * The addArgument method takes a type and a definition of a {@link FramesetArgument} as input, then it creates a new FramesetArgument from these inputs and
- * adds it to the framesetArguments {@link ArrayList}.
+ * The addArgument method takes a type and a definition of a FramesetArgument as input, then it creates a new FramesetArgument from these inputs and
+ * adds it to the framesetArguments ArrayList.
  *
- * @param type  Type of the new {@link FramesetArgument}
- * @param definition Definition of the new {@link FramesetArgument}
- * @param function Function of the new {@link FramesetArgument}
+ * @param type  Type of the new FramesetArgument
+ * @param definition Definition of the new FramesetArgument
+ * @param function Function of the new FramesetArgument
  */
 void Frameset::addArgument(const string& type, const string& definition, const string& function) {
     bool check = false;
@@ -67,11 +67,11 @@ void Frameset::addArgument(const string& type, const string& definition, const s
 }
 
 /**
- * The deleteArgument method takes a type and a definition of a {@link FramesetArgument} as input, then it searches for the FramesetArgument with these type and
- * definition, and if it finds removes it from the framesetArguments {@link ArrayList}.
+ * The deleteArgument method takes a type and a definition of a FramesetArgument as input, then it searches for the FramesetArgument with these type and
+ * definition, and if it finds removes it from the framesetArguments ArrayList.
  *
- * @param type  Type of the to be deleted {@link FramesetArgument}
- * @param definition Definition of the to be deleted {@link FramesetArgument}
+ * @param type  Type of the to be deleted FramesetArgument
+ * @param definition Definition of the to be deleted FramesetArgument
  */
 void Frameset::deleteArgument(const string& type, const string& definition) {
     int index = -1;

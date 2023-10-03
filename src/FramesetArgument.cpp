@@ -5,7 +5,7 @@
 #include "FramesetArgument.h"
 
 /**
- * A constructor of {@link FramesetArgument} class which takes _argumentType and _definition as input and initializes corresponding attributes
+ * A constructor of FramesetArgument class which takes _argumentType and _definition as input and initializes corresponding attributes
  *
  * @param _argumentType  ArgumentType of the frameset argument
  * @param _definition  Definition of the frameset argument
@@ -62,7 +62,7 @@ void FramesetArgument::setFunction(const string& _function) {
 }
 
 /**
- * to_string converts an {@link FramesetArgument} to a string. It returns argument string which is in the form of
+ * to_string converts an FramesetArgument to a string. It returns argument string which is in the form of
  * argumentType:definition
  *
  * @return string form of frameset argument

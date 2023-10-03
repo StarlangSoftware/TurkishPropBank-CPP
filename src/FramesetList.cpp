@@ -6,8 +6,8 @@
 #include "XmlDocument.h"
 
 /**
- * A constructor of {@link FramesetList} class which reads all frameset files inside the files.txt file. For each
- * filename inside that file, the constructor creates a Frameset and puts in inside the frames {@link ArrayList}.
+ * A constructor of FramesetList class which reads all frameset files inside the files.txt file. For each
+ * filename inside that file, the constructor creates a Frameset and puts in inside the frames ArrayList.
  */
 FramesetList::FramesetList() {
     XmlElement* framesNode, *frameSetNode;
@@ -22,9 +22,9 @@ FramesetList::FramesetList() {
 }
 
 /**
- * The size method returns the size of the frames {@link ArrayList}.
+ * The size method returns the size of the frames ArrayList.
  *
- * @return the size of the frames {@link ArrayList}.
+ * @return the size of the frames ArrayList.
  */
 unsigned long FramesetList::size() const{
     return frames.size();
@@ -34,14 +34,14 @@ unsigned long FramesetList::size() const{
  * The getFrameSet method returns the frameset at the given index.
  *
  * @param index  Index of the frameset
- * @return {@link Frameset} at the given index.
+ * @return Frameset at the given index.
  */
 Frameset FramesetList::getFrameset(unsigned long index) const{
     return frames.at(index);
 }
 
 /**
- * The addFrameset method takes a {@link Frameset} as input and adds it to the frames {@link ArrayList}.
+ * The addFrameset method takes a Frameset as input and adds it to the frames ArrayList.
  *
  * @param frameset  Frameset to be added
  */
@@ -50,10 +50,10 @@ void FramesetList::addFrameset(const Frameset& frameset) {
 }
 
 /**
- * getFrameSet method returns the {@link Frameset} with the given synSet id.
+ * getFrameSet method returns the Frameset with the given synSet id.
  *
- * @param synSetId  Id of the searched {@link Frameset}
- * @return {@link Frameset} which has the given id.
+ * @param synSetId  Id of the searched Frameset
+ * @return Frameset which has the given id.
  */
 Frameset FramesetList::getFrameset(const string& synSetId) const{
     for (Frameset frame : frames){
@@ -64,10 +64,10 @@ Frameset FramesetList::getFrameset(const string& synSetId) const{
 }
 
 /**
- * frameExists method checks if there is a {@link Frameset} with the given synSet id.
+ * frameExists method checks if there is a Frameset with the given synSet id.
  *
- * @param synSetId  Id of the searched {@link Frameset}
- * @return true if the {@link Frameset} with the given id exists, false otherwise.
+ * @param synSetId  Id of the searched Frameset
+ * @return true if the Frameset with the given id exists, false otherwise.
  */
 bool FramesetList::frameExists(const string& synSetId) const{
     for (const Frameset& frame : frames){
@@ -79,11 +79,11 @@ bool FramesetList::frameExists(const string& synSetId) const{
 }
 
 /**
- * readFromXML method searches the {@link Frameset} with a given synSetId if there is a {@link Frameset} with the given synSet id,
- * returns the arguments of that {@link Frameset} as an {@link HashMap}.
+ * readFromXML method searches the Frameset with a given synSetId if there is a Frameset with the given synSet id,
+ * returns the arguments of that Frameset as an HashMap.
  *
- * @param synSetId  Id of the searched {@link Frameset}
- * @return an {@link HashMap} containing the arguments of the searched {@link Frameset}
+ * @param synSetId  Id of the searched Frameset
+ * @return an HashMap containing the arguments of the searched Frameset
  */
 map<ArgumentType, string> FramesetList::readFromXML(const string& synSetId) {
     map<ArgumentType, string> frameset;

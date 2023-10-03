@@ -6,7 +6,7 @@
 using namespace std;
 
 /**
- * A constructor of {@link Argument} class which takes argument string which is in the form of argumentType$id
+ * A constructor of Argument class which takes argument string which is in the form of argumentType$id
  * and parses this string into argumentType and id. If the argument string does not contain '$' then the
  * constructor return a NONE type argument.
  *
@@ -22,7 +22,7 @@ Argument::Argument(const string& argument) {
 }
 
 /**
- * Another constructor of {@link Argument} class which takes _argumentType and _id as inputs and initializes corresponding attributes
+ * Another constructor of Argument class which takes _argumentType and _id as inputs and initializes corresponding attributes
  *
  * @param _argumentType  Type of the argument
  * @param _id  Id of the argument
@@ -51,7 +51,7 @@ string Argument::getId() const{
 }
 
 /**
- * to_string converts an {@link Argument} to a string. If the argumentType is "NONE" returns only "NONE", otherwise
+ * to_string converts an Argument to a string. If the argumentType is "NONE" returns only "NONE", otherwise
  * it returns argument string which is in the form of argumentType$id
  *
  * @return string form of argument
