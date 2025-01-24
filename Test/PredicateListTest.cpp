@@ -13,7 +13,7 @@ TEST_CASE("PredicateList-testPredicateSize") {
 TEST_CASE("PredicateList-testRoleSetSize") {
     PredicateList predicateList = PredicateList();
     int count = 0;
-    for (string lemma : predicateList.getLemmaList()){
+    for (const string& lemma : predicateList.getLemmaList()){
         count += predicateList.getPredicate(lemma).size();
     }
     REQUIRE(10685 == count);
@@ -22,7 +22,7 @@ TEST_CASE("PredicateList-testRoleSetSize") {
 TEST_CASE("PredicateList-testRoleSize") {
     PredicateList predicateList = PredicateList();
     int count = 0;
-    for (string lemma : predicateList.getLemmaList()){
+    for (const string& lemma : predicateList.getLemmaList()){
         for (int i = 0; i < predicateList.getPredicate(lemma).size(); i++){
             count += predicateList.getPredicate(lemma).getRoleSet(i).size();
         }
@@ -33,7 +33,7 @@ TEST_CASE("PredicateList-testRoleSize") {
 TEST_CASE("PredicateList-testFunction") {
     PredicateList predicateList = PredicateList();
     map<string, int> functionList = map<string, int>();
-    for (string lemma : predicateList.getLemmaList()){
+    for (const string& lemma : predicateList.getLemmaList()){
         for (int i = 0; i < predicateList.getPredicate(lemma).size(); i++){
             for (int j = 0; j < predicateList.getPredicate(lemma).getRoleSet(i).size(); j++){
                 string function = predicateList.getPredicate(lemma).getRoleSet(i).getRole(j).getF();
@@ -66,7 +66,7 @@ TEST_CASE("PredicateList-testFunction") {
 TEST_CASE("PredicateList-testN") {
     PredicateList predicateList = PredicateList();
     map<string, int> nList = map<string, int>();
-    for (string lemma : predicateList.getLemmaList()){
+    for (const string& lemma : predicateList.getLemmaList()){
         for (int i = 0; i < predicateList.getPredicate(lemma).size(); i++){
             for (int j = 0; j < predicateList.getPredicate(lemma).getRoleSet(i).size(); j++){
                 string n = predicateList.getPredicate(lemma).getRoleSet(i).getRole(j).getN();
