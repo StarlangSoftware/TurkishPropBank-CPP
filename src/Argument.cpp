@@ -63,3 +63,11 @@ string Argument::to_string() const{
         return argumentType + "$" + id;
     }
 }
+
+/**
+ * Setter for the id
+ * @param id New id of the argument
+ */
+void Argument::setId(const string& _id) {
+    this->id = _id;
+}

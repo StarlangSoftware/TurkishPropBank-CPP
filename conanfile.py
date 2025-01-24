@@ -8,7 +8,7 @@ from conan.tools.files import copy
 class PropBankConan(ConanFile):
     name = "prop_bank"
     version = "1.0.0"
-    requires = "xml_parser/1.0.0"
+    requires = ["xml_parser/1.0.0", "util/1.0.0"]
     license = "GPL License"
     author = "Olcay Taner Yildiz olcay.yildiz@ozyegin.edu.tr"
     url = "https://github.com/StarlangSoftware/TurkishPropBank-CPP"
