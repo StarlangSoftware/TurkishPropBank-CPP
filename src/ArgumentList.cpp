@@ -39,7 +39,7 @@ string ArgumentList::to_string() const{
  * @param previousId Previous id of the synset.
  * @param currentId Replacement id.
  */
-void ArgumentList::updateConnectedId(const string &previousId, const string &currentId) {
+void ArgumentList::updateConnectedId(const string &previousId, const string &currentId) const {
     for (Argument argument: arguments){
         if (argument.getId() == previousId){
             argument.setId(currentId);
@@ -101,7 +101,7 @@ bool ArgumentList::containsPredicateWithId(const string &predicateId) const{
  * Returns the arguments as an array list of strings.
  * @return Arguments as an array list of strings.
  */
-vector<string> ArgumentList::getArguments() {
+vector<string> ArgumentList::getArguments() const {
     vector<string> result;
     result.reserve(arguments.size());
     for (const Argument& argument: arguments){
