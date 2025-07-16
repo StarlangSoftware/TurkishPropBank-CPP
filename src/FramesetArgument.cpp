@@ -9,11 +9,14 @@
  *
  * @param _argumentType  ArgumentType of the frameset argument
  * @param _definition  Definition of the frameset argument
+ * @param _function Function of the frameset argument
+ * @param _grammaticalCase Case of the frameset argument
  */
-FramesetArgument::FramesetArgument(const string& _argumentType, const string& _definition, const string& _function) {
+FramesetArgument::FramesetArgument(const string& _argumentType, const string& _definition, const string& _function, const string& _grammaticalCase) {
     this->argumentType = _argumentType;
     this->definition = _definition;
     this->function = _function;
+    this->grammaticalCase = _grammaticalCase;
 }
 
 /**
@@ -44,9 +47,18 @@ string FramesetArgument::getFunction() const{
 }
 
 /**
+ * Accessor for grammaticalCase.
+ *
+ * @return grammaticalCase.
+ */
+string FramesetArgument::getGrammaticalCase() const {
+    return grammaticalCase;
+}
+
+/**
  * Mutator for _definition.
  *
- * @param _definition to set.
+ * @param _definition definition to set.
  */
 void FramesetArgument::setDefinition(const string& _definition) {
     this->definition = _definition;
@@ -55,10 +67,19 @@ void FramesetArgument::setDefinition(const string& _definition) {
 /**
  * Mutator for definition.
  *
- * @param definition to set.
+ * @param _function function to set.
  */
 void FramesetArgument::setFunction(const string& _function) {
     this->function = _function;
+}
+
+/**
+ * Mutator for grammaticalCase.
+ *
+ * @param _grammaticalCase grammaticalCase to set.
+ */
+void FramesetArgument::setGrammaticalCase(const string &_grammaticalCase) {
+    this->grammaticalCase = _grammaticalCase;
 }
 
 /**

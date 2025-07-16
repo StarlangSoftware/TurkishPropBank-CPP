@@ -20,7 +20,7 @@ public:
     explicit Frameset(const string& _id);
     explicit Frameset(XmlElement* frameSetNode);
     bool containsArgument(ArgumentType argumentType) const;
-    void addArgument(const string& type, const string& definition, const string& function);
+    void addArgument(const string& type, const string& definition, const string& function, const string& grammaticalCase);
     void deleteArgument(const string& type, const string& definition);
     vector<FramesetArgument> getFramesetArguments() const;
     string getId() const;

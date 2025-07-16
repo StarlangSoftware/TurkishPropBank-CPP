@@ -13,13 +13,16 @@ private:
     string argumentType;
     string definition;
     string function;
+    string grammaticalCase;
 public:
-    FramesetArgument(const string& _argumentType, const string& _definition, const string& _function);
+    FramesetArgument(const string& _argumentType, const string& _definition, const string& _function, const string& _grammaticalCase);
     string getArgumentType() const;
     string getDefinition() const;
     string getFunction() const;
+    string getGrammaticalCase() const;
     void setDefinition(const string& _definition);
     void setFunction(const string& _function);
+    void setGrammaticalCase(const string& _grammaticalCase);
     string to_string() const;
 };
 

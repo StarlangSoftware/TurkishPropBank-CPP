@@ -22,7 +22,7 @@ Frameset::Frameset(XmlElement* frameSetNode) {
     id = frameSetNode->getAttributeValue("id");
     XmlElement* argument = frameSetNode->getFirstChild();
     while (argument != nullptr){
-        FramesetArgument framesetArgument = FramesetArgument(argument->getAttributeValue("name"), argument->getPcData(), argument->getAttributeValue("function"));
+        FramesetArgument framesetArgument = FramesetArgument(argument->getAttributeValue("name"), argument->getPcData(), argument->getAttributeValue("function"), argument->getAttributeValue("grammaticalCase"));
         framesetArguments.push_back(framesetArgument);
         argument = argument->getNextSibling();
     }
@@ -50,8 +50,9 @@ bool Frameset::containsArgument(ArgumentType argumentType) const{
  * @param type  Type of the new FramesetArgument
  * @param definition Definition of the new FramesetArgument
  * @param function Function of the new FramesetArgument
+ *
  */
-void Frameset::addArgument(const string& type, const string& definition, const string& function) {
+void Frameset::addArgument(const string& type, const string& definition, const string& function, const string& grammaticalCase) {
     bool check = false;
     for (FramesetArgument a : framesetArguments) {
         if (a.getArgumentType() == type) {
@@ -61,7 +62,7 @@ void Frameset::addArgument(const string& type, const string& definition, const s
         }
     }
     if (!check) {
-        FramesetArgument arg = FramesetArgument(type, definition, function);
+        FramesetArgument arg = FramesetArgument(type, definition, function, grammaticalCase);
         framesetArguments.push_back(arg);
     }
 }

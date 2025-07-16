@@ -8,7 +8,7 @@
 
 TEST_CASE("FramesetList-testFrames") {
     FramesetList framesetList = FramesetList();
-    REQUIRE(17691 == framesetList.size());
+    REQUIRE(17692 == framesetList.size());
 }
 
 TEST_CASE("FramesetList-testArgSize") {
@@ -17,7 +17,74 @@ TEST_CASE("FramesetList-testArgSize") {
     for (int i = 0; i < framesetList.size(); i++){
         count += framesetList.getFrameset(i).getFramesetArguments().size();
     }
-    REQUIRE(29759 == count);
+    REQUIRE(29761 == count);
+}
+
+TEST_CASE("FramesetList-testCase") {
+    FramesetList framesetList = FramesetList();
+    map<string, int> caseList = map<string, int>();
+    for (int i = 0; i < framesetList.size(); i++){
+        for (const FramesetArgument& argument : framesetList.getFrameset(i).getFramesetArguments()) {
+            if (!argument.getGrammaticalCase().empty()) {
+                if (argument.getGrammaticalCase().find("abl") != std::string::npos) {
+                    if (caseList.contains("abl")){
+                        caseList["abl"] = caseList["abl"] + 1;
+                    } else {
+                        caseList["abl"] = 1;
+                    }
+                }
+                if (argument.getGrammaticalCase().find("acc") != std::string::npos) {
+                    if (caseList.contains("acc")){
+                        caseList["acc"] = caseList["acc"] + 1;
+                    } else {
+                        caseList["acc"] = 1;
+                    }
+                }
+                if (argument.getGrammaticalCase().find("dat") != std::string::npos) {
+                    if (caseList.contains("dat")){
+                        caseList["dat"] = caseList["dat"] + 1;
+                    } else {
+                        caseList["dat"] = 1;
+                    }
+                }
+                if (argument.getGrammaticalCase().find("gen") != std::string::npos) {
+                    if (caseList.contains("gen")){
+                        caseList["gen"] = caseList["gen"] + 1;
+                    } else {
+                        caseList["gen"] = 1;
+                    }
+                }
+                if (argument.getGrammaticalCase().find("ins") != std::string::npos) {
+                    if (caseList.contains("ins")){
+                        caseList["ins"] = caseList["ins"] + 1;
+                    } else {
+                        caseList["ins"] = 1;
+                    }
+                }
+                if (argument.getGrammaticalCase().find("loc") != std::string::npos) {
+                    if (caseList.contains("loc")){
+                        caseList["loc"] = caseList["loc"] + 1;
+                    } else {
+                        caseList["loc"] = 1;
+                    }
+                }
+                if (argument.getGrammaticalCase().find("nom") != std::string::npos) {
+                    if (caseList.contains("nom")){
+                        caseList["nom"] = caseList["nom"] + 1;
+                    } else {
+                        caseList["nom"] = 1;
+                    }
+                }
+            }
+        }
+    }
+    REQUIRE(422 == caseList["abl"]);
+    REQUIRE(4690 == caseList["acc"]);
+    REQUIRE(2423 == caseList["dat"]);
+    REQUIRE(880 == caseList["gen"]);
+    REQUIRE(459 == caseList["ins"]);
+    REQUIRE(673 == caseList["loc"]);
+    REQUIRE(2069 == caseList["nom"]);
 }
 
 TEST_CASE("FramesetList-testArgName") {
@@ -32,8 +99,8 @@ TEST_CASE("FramesetList-testArgName") {
             }
         }
     }
-    REQUIRE(14668 == nameList["ARG0"]);
-    REQUIRE(13126 == nameList["ARG1"]);
+    REQUIRE(14669 == nameList["ARG0"]);
+    REQUIRE(13127 == nameList["ARG1"]);
     REQUIRE(1886 == nameList["ARG2"]);
     REQUIRE(78 == nameList["ARG3"]);
     REQUIRE(1 == nameList["ARG4"]);
@@ -56,10 +123,10 @@ TEST_CASE("FramesetList-testArgFunction") {
     REQUIRE(814 == functionList["loc"]);
     REQUIRE(198 == functionList["rec"]);
     REQUIRE(14 == functionList["pat"]);
-    REQUIRE(10687 == functionList["ppt"]);
+    REQUIRE(10688 == functionList["ppt"]);
     REQUIRE(605 == functionList["src"]);
     REQUIRE(801 == functionList["gol"]);
     REQUIRE(156 == functionList["tmp"]);
-    REQUIRE(14557 == functionList["pag"]);
+    REQUIRE(14558 == functionList["pag"]);
     REQUIRE(1432 == functionList["dir"]);
 }
