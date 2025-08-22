@@ -8,7 +8,7 @@
 
 TEST_CASE("FramesetList-testFrames") {
     FramesetList framesetList = FramesetList();
-    REQUIRE(17692 == framesetList.size());
+    REQUIRE(17531 == framesetList.size());
 }
 
 TEST_CASE("FramesetList-testArgSize") {
@@ -17,7 +17,7 @@ TEST_CASE("FramesetList-testArgSize") {
     for (int i = 0; i < framesetList.size(); i++){
         count += framesetList.getFrameset(i).getFramesetArguments().size();
     }
-    REQUIRE(29761 == count);
+    REQUIRE(29473 == count);
 }
 
 TEST_CASE("FramesetList-testCase") {
@@ -78,13 +78,13 @@ TEST_CASE("FramesetList-testCase") {
             }
         }
     }
-    REQUIRE(422 == caseList["abl"]);
-    REQUIRE(4690 == caseList["acc"]);
-    REQUIRE(2423 == caseList["dat"]);
-    REQUIRE(880 == caseList["gen"]);
-    REQUIRE(459 == caseList["ins"]);
-    REQUIRE(673 == caseList["loc"]);
-    REQUIRE(2069 == caseList["nom"]);
+    REQUIRE(418 == caseList["abl"]);
+    REQUIRE(4633 == caseList["acc"]);
+    REQUIRE(2402 == caseList["dat"]);
+    REQUIRE(870 == caseList["gen"]);
+    REQUIRE(451 == caseList["ins"]);
+    REQUIRE(666 == caseList["loc"]);
+    REQUIRE(2049 == caseList["nom"]);
 }
 
 TEST_CASE("FramesetList-testArgName") {
@@ -99,10 +99,10 @@ TEST_CASE("FramesetList-testArgName") {
             }
         }
     }
-    REQUIRE(14669 == nameList["ARG0"]);
-    REQUIRE(13127 == nameList["ARG1"]);
-    REQUIRE(1886 == nameList["ARG2"]);
-    REQUIRE(78 == nameList["ARG3"]);
+    REQUIRE(14535 == nameList["ARG0"]);
+    REQUIRE(12996 == nameList["ARG1"]);
+    REQUIRE(1865 == nameList["ARG2"]);
+    REQUIRE(76 == nameList["ARG3"]);
     REQUIRE(1 == nameList["ARG4"]);
 }
 
@@ -118,15 +118,15 @@ TEST_CASE("FramesetList-testArgFunction") {
             }
         }
     }
-    REQUIRE(481 == functionList["com"]);
+    REQUIRE(475 == functionList["com"]);
     REQUIRE(14 == functionList["ext"]);
-    REQUIRE(814 == functionList["loc"]);
-    REQUIRE(198 == functionList["rec"]);
-    REQUIRE(14 == functionList["pat"]);
-    REQUIRE(10688 == functionList["ppt"]);
-    REQUIRE(605 == functionList["src"]);
-    REQUIRE(801 == functionList["gol"]);
+    REQUIRE(808 == functionList["loc"]);
+    REQUIRE(195 == functionList["rec"]);
+    REQUIRE(13 == functionList["pat"]);
+    REQUIRE(10579 == functionList["ppt"]);
+    REQUIRE(597 == functionList["src"]);
+    REQUIRE(794 == functionList["gol"]);
     REQUIRE(156 == functionList["tmp"]);
-    REQUIRE(14558 == functionList["pag"]);
-    REQUIRE(1432 == functionList["dir"]);
+    REQUIRE(14425 == functionList["pag"]);
+    REQUIRE(1417 == functionList["dir"]);
 }
