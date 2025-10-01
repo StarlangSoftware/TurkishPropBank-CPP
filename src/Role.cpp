@@ -6,6 +6,8 @@
 
 #include "Role.h"
 
+#include <algorithm>
+
 /**
  * A constructor of Role class which takes _description, _f, and _n as inputs and initializes corresponding with these inputs.
  *
