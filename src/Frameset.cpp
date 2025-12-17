@@ -18,7 +18,7 @@ Frameset::Frameset(const string& _id) {
  *
  * @param frameSetNode Part of Xml node to read from
  */
-Frameset::Frameset(XmlElement* frameSetNode) {
+Frameset::Frameset(const XmlElement* frameSetNode) {
     id = frameSetNode->getAttributeValue("id");
     XmlElement* argument = frameSetNode->getFirstChild();
     while (argument != nullptr){
@@ -35,7 +35,7 @@ Frameset::Frameset(XmlElement* frameSetNode) {
  * @return true if the Argument with the given argumentType exists, false otherwise.
  */
 bool Frameset::containsArgument(ArgumentType argumentType) const{
-    for (FramesetArgument framesetArgument : framesetArguments){
+    for (const FramesetArgument& framesetArgument : framesetArguments){
         if (getArguments(framesetArgument.getArgumentType()) == argumentType){
             return true;
         }
@@ -50,6 +50,7 @@ bool Frameset::containsArgument(ArgumentType argumentType) const{
  * @param type  Type of the new FramesetArgument
  * @param definition Definition of the new FramesetArgument
  * @param function Function of the new FramesetArgument
+ * @param grammaticalCase Grammatical case of the verb.
  *
  */
 void Frameset::addArgument(const string& type, const string& definition, const string& function, const string& grammaticalCase) {

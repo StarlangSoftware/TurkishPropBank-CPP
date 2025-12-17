@@ -17,12 +17,12 @@ private:
     vector<Role> roles;
 public:
     RoleSet(const string& _id, const string& _name);
-    string getId() const;
-    string getName() const;
+    [[nodiscard]] string getId() const;
+    [[nodiscard]] string getName() const;
     void addRole(const Role& role);
-    Role getRole(int index) const;
-    unsigned long size() const;
-    Role getRoleWithArgument(const string& n) const;
+    [[nodiscard]] Role getRole(int index) const;
+    [[nodiscard]] unsigned long size() const;
+    [[nodiscard]] Role getRoleWithArgument(const string& n) const;
 };
 
 

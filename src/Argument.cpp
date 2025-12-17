@@ -66,7 +66,7 @@ string Argument::to_string() const{
 
 /**
  * Setter for the id
- * @param id New id of the argument
+ * @param _id New id of the argument
  */
 void Argument::setId(const string& _id) {
     this->id = _id;

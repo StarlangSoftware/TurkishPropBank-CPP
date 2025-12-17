@@ -24,10 +24,9 @@ using namespace std;
  * @return Type of the argument in {@link ArgumentType} form
  */
 static ArgumentType getArguments(string argumentsType){
-    transform(argumentsType.begin(),
-                   argumentsType.end(),
-                   argumentsType.begin(),
-                   ::toupper);
+    ranges::transform(argumentsType,
+                      argumentsType.begin(),
+                      ::toupper);
     if (argumentsType.empty()){
         return ArgumentType::NONE;
     } else {

@@ -16,11 +16,11 @@ private:
     vector<RoleSet> roleSets;
 public:
     explicit Predicate(const string& _lemma);
-    string getLemma() const;
+    [[nodiscard]] string getLemma() const;
     void addRoleSet(const RoleSet& roleSet);
-    unsigned long size() const;
-    RoleSet getRoleSet(unsigned long index) const;
-    RoleSet getRoleSet(const string& roleId) const;
+    [[nodiscard]] unsigned long size() const;
+    [[nodiscard]] RoleSet getRoleSet(unsigned long index) const;
+    [[nodiscard]] RoleSet getRoleSet(const string& roleId) const;
 };
 
 

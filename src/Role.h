@@ -16,10 +16,10 @@ private:
     string n;
 public:
     Role(const string& _description, const string& _f, const string& _n);
-    string getDescription() const;
-    string getF() const;
-    string getN() const;
-    ArgumentType getArgumentType() const;
+    [[nodiscard]] string getDescription() const;
+    [[nodiscard]] string getF() const;
+    [[nodiscard]] string getN() const;
+    [[nodiscard]] ArgumentType getArgumentType() const;
 };
 
 

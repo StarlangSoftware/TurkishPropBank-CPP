@@ -55,6 +55,6 @@ string Role::getN() const{
  */
 ArgumentType Role::getArgumentType() const{
     string tmp = f;
-    transform(tmp.begin(), tmp.end(), tmp.begin(), ::toupper);
+    ranges::transform(tmp, tmp.begin(), ::toupper);
     return getArguments("ARG" + tmp);
 }

@@ -15,12 +15,12 @@ private:
     vector<Frameset> frames;
 public:
     FramesetList();
-    unsigned long size() const;
-    Frameset getFrameset(unsigned long index) const;
+    [[nodiscard]] unsigned long size() const;
+    [[nodiscard]] Frameset getFrameset(unsigned long index) const;
     void addFrameset(const Frameset& frameset);
-    Frameset getFrameset(const string& synSetId) const;
-    bool frameExists(const string& synSetId) const;
-    map<ArgumentType, string> readFromXML(const string& synSetId);
+    [[nodiscard]] Frameset getFrameset(const string& synSetId) const;
+    [[nodiscard]] bool frameExists(const string& synSetId) const;
+    [[nodiscard]] map<ArgumentType, string> readFromXML(const string& synSetId) const;
 };
 
 

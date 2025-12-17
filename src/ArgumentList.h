@@ -13,14 +13,14 @@ private:
     vector<Argument> arguments;
 public:
     explicit ArgumentList(const string& argumentList);
-    string to_string() const;
+    [[nodiscard]] string to_string() const;
     void updateConnectedId(const string& previousId, const string& currentId) const;
     void addPredicate(const string& predicateId);
     void removePredicate();
-    bool containsPredicate() const;
-    bool containsPredicateWithId(const string& predicateId) const;
-    vector<string> getArguments() const;
-    bool containsArgument(const string& argumentType, const string& id) const;
+    [[nodiscard]] bool containsPredicate() const;
+    [[nodiscard]] bool containsPredicateWithId(const string& predicateId) const;
+    [[nodiscard]] vector<string> getArguments() const;
+    [[nodiscard]] bool containsArgument(const string& argumentType, const string& id) const;
 };
 
 

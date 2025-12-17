@@ -16,9 +16,9 @@ private:
     map<string, Predicate> list;
 public:
     PredicateList();
-    unsigned long size() const;
-    Predicate getPredicate(const string& lemma) const;
-    unordered_set<string> getLemmaList() const;
+    [[nodiscard]] unsigned long size() const;
+    [[nodiscard]] Predicate getPredicate(const string& lemma) const;
+    [[nodiscard]] unordered_set<string> getLemmaList() const;
 };
 
 

@@ -85,7 +85,7 @@ bool FramesetList::frameExists(const string& synSetId) const{
  * @param synSetId  Id of the searched Frameset
  * @return an HashMap containing the arguments of the searched Frameset
  */
-map<ArgumentType, string> FramesetList::readFromXML(const string& synSetId) {
+map<ArgumentType, string> FramesetList::readFromXML(const string& synSetId) const {
     map<ArgumentType, string> frameset;
     for (const Frameset& frame : frames){
         if (frame.getId() == synSetId){

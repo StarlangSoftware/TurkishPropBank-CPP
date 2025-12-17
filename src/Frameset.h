@@ -18,12 +18,12 @@ private:
     vector<FramesetArgument> framesetArguments;
 public:
     explicit Frameset(const string& _id);
-    explicit Frameset(XmlElement* frameSetNode);
-    bool containsArgument(ArgumentType argumentType) const;
+    explicit Frameset(const XmlElement* frameSetNode);
+    [[nodiscard]] bool containsArgument(ArgumentType argumentType) const;
     void addArgument(const string& type, const string& definition, const string& function, const string& grammaticalCase);
     void deleteArgument(const string& type, const string& definition);
-    vector<FramesetArgument> getFramesetArguments() const;
-    string getId() const;
+    [[nodiscard]] vector<FramesetArgument> getFramesetArguments() const;
+    [[nodiscard]] string getId() const;
     void setId(const string& _id);
 };
 
